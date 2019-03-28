@@ -1,0 +1,58 @@
+<!--
+  Generated template for the RegistrarPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar>
+        <button  ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+      <ion-title>Login To the Aplications</ion-title>
+    </ion-navbar>
+   
+  </ion-header>
+  <ion-content padding>
+  
+    <ion-list>
+       
+        <ion-item>
+          <ion-label >email </ion-label>
+          <ion-input type="text" [(ngModel)]="reg.email" name="email">  </ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label >Password </ion-label>
+            <ion-input  name="password" type="password" [(ngModel)]="reg.password"></ion-input>
+        </ion-item> 
+        <ion-item>
+            <ion-label >Password </ion-label>
+            <ion-input  name="confirmPassword" type="password" [(ngModel)]="reg.confirmPassword"></ion-input>
+        </ion-item> 
+        <ion-item>
+            <ion-label >NickName</ion-label>
+            <ion-input type="text" [(ngModel)]="reg.nickName" name="nickName">  </ion-input>
+          </ion-item>
+
+        <ion-item>
+        <ion-row>
+                <ion-col width-100 style="text-align: center">
+                    <ion-button ion-button   (click) = 'Registrar();' >Registrar</ion-button>
+               </ion-col>
+        </ion-row>
+        </ion-item>
+         
+        <ion-item ion-item *ngFor="let item of errors"   [ngStyle]="{'background-color': 'yellow' }"  >
+            {{item}} 
+        </ion-item>
+        <ion-item>
+            {{datos.user}} 
+        </ion-item>
+        <ion-item>
+            {{datos.token}} 
+        </ion-item>
+        <ion-item>
+            {{datos.NickName}} 
+        </ion-item>
+    </ion-list>
+  </ion-content>

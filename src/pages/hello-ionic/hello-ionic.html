@@ -1,25 +1,43 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
+    
+    <button  ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Hello Ionic</ion-title>
+   
   </ion-navbar>
+  
+  
 </ion-header>
-
-
 <ion-content padding>
+    <ion-button ion-button class="pepito" (click) = 'showAlert();' >Go page</ion-button>
+  <!-- <ion-list>
+   <ion-item *ngFor="let grocery of lists">
+        {{grocery.Nombre}}  -->
+        <!-- <div [ngStyle]="{'background-color': grocery.Nombre === 'TEST' ? 'green' : 'red' }"> {{grocery.Nombre}}</<div> -->
+        <!-- <p  style="background-color: chartreuse"  *ngIf=" grocery.Nombre == 'TEST'" >    {{grocery.Nombre}}   </p> -->
+        <!-- <p    *ngIf=" grocery.Nombre != 'TEST'" > {{grocery.Nombre}}   </p> -->
+     <!-- </ion-item>
+  </ion-list> -->
 
-  <h3>Welcome to your first Ionic app!</h3>
-
-  <p>
-    This starter project is our way of helping you get a functional app running in record time.
-  </p>
-  <p>
-    Follow along on the tutorial section of the Ionic docs!
-  </p>
-  <p>
-    <button ion-button color="primary" menuToggle>Toggle Menu</button>
-  </p>
-
+  
+  <style>
+    .round {
+           --width: 60px;
+           --height: 60px;
+           --border-radius: 50%;
+           --vertical-align: middle;
+           --padding-start: 10px;
+           --padding-end: 10px;
+         }
+         .custom {
+         --background: lightpink;
+         --background-activated: green;
+         --color: #222;
+         --color-activated: white;
+         --opacity: 1;
+       }
+   </style>
 </ion-content>
+

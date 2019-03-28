@@ -1,0 +1,51 @@
+<ion-header>
+        <ion-navbar>
+            <button  ion-button menuToggle>
+                <ion-icon name="menu"></ion-icon>
+              </button>
+          <ion-title>Login To the Aplications</ion-title>
+        </ion-navbar>
+       
+      </ion-header>
+      <ion-content padding>
+        <ion-list>
+            <ion-item>
+              <ion-label >User</ion-label>
+              <ion-input type="text" [(ngModel)]="log.user" name="user">  </ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label >Password </ion-label>
+                <ion-input  name="password" type="password" [(ngModel)]="log.password"></ion-input>
+            </ion-item> 
+            <ion-item>
+            <ion-row>
+                    <ion-col width-100 style="text-align: center">
+                        <ion-button ion-button class="pepito"   (click) = 'Login();' >Login</ion-button>
+                   </ion-col>
+            </ion-row>
+            </ion-item>
+            <ion-item>
+                    <ion-row>
+                            <ion-col width-50 style=" vertical-align: middle; text-align: center"  >
+                            Podes registrarte aqui sino estas registrado
+                            </ion-col>
+                            <ion-col width-50 style="text-align: center">
+                    <ion-button   ion-button (click) = 'Registrar();' >Registrar</ion-button>
+                            </ion-col>
+                     </ion-row>
+
+                </ion-item> 
+            <ion-item ion-item *ngFor="let item of errors"   [ngStyle]="{'background-color': 'yellow' }"  >
+                {{item}} 
+            </ion-item>
+            <ion-item>
+                {{datos.user}} 
+            </ion-item>
+            <ion-item>
+                {{datos.token}} 
+            </ion-item>
+            <ion-item>
+                {{datos.NickName}} 
+            </ion-item>
+        </ion-list>
+      </ion-content>

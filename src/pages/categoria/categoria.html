@@ -1,0 +1,24 @@
+<!--
+  Generated template for the CategoriaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>categoria</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+     <ion-row>
+      <ion-col width-100 style="text-align: center">
+          <button ion-item *ngFor="let item of model"  class="itemClase" (click)="play(item);" [ngStyle]="{'background-color': item.color }"   >
+            {{item.Nombre}} 
+          </button>
+      </ion-col>
+     </ion-row>
+
+</ion-list>
+</ion-content>

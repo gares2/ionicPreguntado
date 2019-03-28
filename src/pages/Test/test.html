@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Hello Ionic Esta es la nueva pagina</ion-title>
+  </ion-navbar>
+  <ion-button ion-button class="pepito" (click) = 'showAlert();' >get api</ion-button>
+  <ion-button ion-button class="pepito" (click) = 'add();' >add Value</ion-button>
+</ion-header>
+<ion-content padding>
+
+  <ion-list>
+      <button ion-item *ngFor="let grocery of lists"  (click)="Remove($event,grocery);" [ngStyle]="{'background-color': grocery.Nombre === 'TEST' ? 'yellow' : 'white' }"  >
+        {{grocery.Nombre}} 
+        <!-- {{grocery.Nombre}}  -->
+        <!-- <p   [ngStyle]="{'background-color': grocery.Nombre === 'TEST' ? 'yellow' : 'white' }"  >    {{grocery.Nombre}}   </p> -->
+
+                <!-- <p   [ngStyle]="{'background-color': grocery.Nombre === 'TEST' ? 'green' : 'red' }"  >    {{grocery.Nombre}}   </p> -->
+                
+        <!-- <div [ngStyle]="{'background-color': grocery.Nombre === 'TEST' ? 'green' : 'red' }"> {{grocery.Nombre}}</<div> -->
+        <!-- <p  style="background-color: chartreuse"  *ngIf=" grocery.Nombre == 'TEST'" >    {{grocery.Nombre}}   </p> -->
+        <!-- <p    *ngIf=" grocery.Nombre != 'TEST'" > {{grocery.Nombre}}   </p> -->
+      </button>
+  </ion-list>
+</ion-content>
+

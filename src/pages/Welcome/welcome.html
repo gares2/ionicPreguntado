@@ -1,0 +1,24 @@
+<ion-header>
+        <ion-navbar>
+            <button  ion-button menuToggle>
+                <ion-icon name="menu"></ion-icon>
+              </button>
+          <ion-title>Welcome To the Aplications</ion-title>
+        </ion-navbar>
+       
+      </ion-header>
+      <ion-content padding>
+        <ion-button ion-button  (click) = 'Jugar();' >Go page</ion-button>
+        <ion-list>
+
+            <ion-item >
+                {{datos.user}} 
+            </ion-item>
+            <ion-item>
+                {{datos.token}} 
+            </ion-item>
+            <ion-item>
+                {{datos.NickName}} 
+            </ion-item>
+        </ion-list>
+      </ion-content>
